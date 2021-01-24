@@ -1,0 +1,87 @@
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('picture (3).jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: currentColor;
+  background-attachment: fixed;
+}
+
+/* Style the header */
+header {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  font-size: 34px;
+  color: red;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background:rgba(167,123,64,0.5); ;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  padding: 1px;
+  text-align: left;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: rgba(34,123,64,0.5);
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: transparent;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: none;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #175;
+  color: white;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}

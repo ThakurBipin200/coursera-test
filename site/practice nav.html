@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practice</title>
+<style>
+	
+	ul{
+		margin: 0;
+		padding: 0;
+		background-color: red;
+		overflow: hidden;
+	}
+	li{
+		float: left;
+	}
+    li a,.dropbtn{
+	 color:black;
+	 display: inline-block;
+     background-color: red;
+     padding: 14px 16px;
+     border: none;
+     cursor: pointer;
+	}
+	li.dropdown{
+		display: inline-block;
+	}
+	.dropdown-content{
+		display: none;
+		background-color: blue;
+		text-align: center;
+		min-width: 160px;
+		position: absolute;
+		box-shadow: 0px 8px 16px 0px rgba(54,0,1,0.2);
+	    z-index: 1;
+	}
+	.dropdown-content a{
+		color: black;
+		background-color: white;
+		padding: 7px;
+		text-decoration: none;
+		display: block;
+	}
+    .dropdown-content a:hover{
+    	background-color: pink;
+    }
+    .dropdown:hover .dropdown-content{
+    	display: block;
+    } 
+     .dropdown:hover .dropbtn{
+    	background-color: rgba(67,98,34,0.5);
+    	color: white;
+    }
+
+    li a:hover:not(.action), {
+    	background-color: yellow;
+    }
+    .action{
+    	background-color: gray;
+    }
+</style>
+</head>
+<body>
+<ul>
+   <li  class="dropdown">
+   	<a class="dropbtn">Home</a>
+  	<div class="dropdown-content">
+  		<a href="http://google.com">Google</a>
+  		<a href="http://Amazon.com">Amazon</a>
+  		<a href="http://gmail.com">Gmail</a>
+  	</div>
+  </li>
+
+  <li style="float:right;" class="dropdown">
+	  	<a class="dropbtn">Hyperlinks</a>
+	  	<div style="min-width:10%;" class="dropdown-content action">
+	  		<a href="http://google.com">Google</a>
+	  		<a href="http://Amazon.com">Amazon</a>
+	  		<a href="http://gmail.com">Gmail</a>
+	  </div>
+  </li>
+ </ul>
+</body>
+</html>
